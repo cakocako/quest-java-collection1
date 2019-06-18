@@ -1,28 +1,40 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
 
-public class Thanos {
+class Thanos{
+   
+    public static void main(String[] args) { 
 
-    public static void main(String[] args) {
+        ArrayList<Hero> heroes = new ArrayList<Hero>();
 
-        // TODO 1 : Create an empty heroes list
+        Hero thor = new Hero("Thor", 1500);
+        heroes.add(thor);
+        Hero blackWidow = new Hero("Black Widow", 34);
+        heroes.add(blackWidow);
+        Hero captainAmerica = new Hero("Captain America", 100);
+        heroes.add(captainAmerica);
+        Hero vision = new Hero("Vision", 3);
+        heroes.add(vision);
+        Hero ironMan = new Hero("Iron Man", 48);
+        heroes.add(ironMan);
+        Hero scarletWich = new Hero("Scarlet Wich", 29);
+        heroes.add(scarletWich);
+        Hero spiderMan = new Hero("Spider-Man", 18);
+        heroes.add(spiderMan);
+        Hero hulk = new Hero("Hulk", 49);
+        heroes.add(hulk);
+        Hero doctorStrange = new Hero("Doctor Strange", 42);
+        heroes.add(doctorStrange);
 
-        // TODO 2 : Add those heroes to the list
-        // name: Black Widow, age: 34
-        // name: Captain America, age: 100
-        // name: Vision, age: 3
-        // name: Iron Man, age: 48
-        // name: Scarlet Witch, age: 29
-        // name: Thor, age: 1500
-        // name: Spider-Man, age: 18
-        // name: Hulk, age: 49
-        // name: Doctor Strange, age: 42
+        thor.setAge(1501);                  //changement age Thor
 
-        // TODO 3 : It's Thor birthday, now he's 1501
+        Collections.shuffle(heroes);        //melange aleatoire de la liste
+        
+        heroes.subList(5, heroes.size()).clear();
 
-        // TODO 4 : Shuffle the heroes list
+        for(int i = 0; i< heroes.size(); i++){
+            System.out.println(heroes.get(i).getName());       //affiche les heros encore en vie
+         }
 
-        // TODO 5 : Keep only the half of the list
-
-        // TODO 6 : Loop throught the list and display the name of the remaining heroes
-    }
-}
+        }  
+        }
