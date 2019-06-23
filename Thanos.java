@@ -20,7 +20,7 @@ class Thanos{
        // Hero thor = new Hero("Thor", 1500);
         //heroes.add(thor);
        
-        //Hero.setAge("Thor",(1501));          //changement age Thor"
+        thor.setAge(1501);          //changement age Thor"
 
         Collections.shuffle(heroes);            //melange aleatoire de la liste
         
